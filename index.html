@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.15.0/matter.min.js"></script>
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+  <body>
+    <div id="canvas"></div>
+    <div id="toolbar">
+      <div id="toolbar-content">
+        <div class="input-div">
+
+          <label for="colorMode">Color mode</label>
+          <select name="colorMode" id="color-mode-select" onchange="changeValue('colorMode', this.value)">
+            <option value="rainbow">Rainbow</option>
+            <option value="white">White</option>
+            <option value="random">Random</option>
+          </select>
+        </div>
+        <div class="input-div">
+<label for="pendulum-count">Pendulums</label>
+      <input name="pendulum-count" id="number-input" type="number" value="100" onchange="changeValue('pendulumCount', this.value)">
+        </div>
+        <div class="input-div">
+<label for="angle-modifier">Angle</label>
+
+          <input name="angle-modifier" type="range" min="1000" value="500" max="100000" onchange="changeValue('angleModifier', this.value)">
+        </div>
+      <button onclick="reset()">Reset</button>
+    </div>
+    </div>
+    </div>
+
+    <script src="sketch.js"></script>
+
+  </body>
+</html>
